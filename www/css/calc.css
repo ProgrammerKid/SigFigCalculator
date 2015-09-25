@@ -1,0 +1,23 @@
+input#sigfig_input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 20px;
+}
+
+button.insert_key {
+    width: 25%;
+}
+
+button.equals_key {
+    width: 50%;
+}
+
+button.insert_key, button.equals_key {
+    box-sizing: border-box;
+    font-size: 20px;
+    padding: 10px;
+
+    background: silver;
+    border: 1px solid white;
+}
