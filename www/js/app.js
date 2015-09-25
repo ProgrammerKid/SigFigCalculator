@@ -3,14 +3,15 @@ var app = {
         var input = document.getElementById("sigfig_input"),
             currInputVal = input.value,
             toAppend = "1234567890+-x/(.)";
+
         if (toAppend.indexOf(character) >= 0) {
-            input.innerHTML = currInputVal + character;
+            input.value = currInputVal + character;
         } else if (character == "Del") {
-            input.innerHTML = currInputVal.substring(0, currInputVal.length - 1);
+            input.value = currInputVal.substring(0, currInputVal.length - 1);
         } else if (character == "C") {
-            input.innerHTML = "";
+            input.value = "";
         } else {
-            alert("Something went wrong.\nKey hit: " + character);
+            console.log("Something went wrong.\nKey hit: " + character);
         }
 
         return 0;
@@ -42,11 +43,11 @@ var app = {
                 button = document.createElement("br");
             } else if (keys[i] != "=") {
                 button.innerHTML = keys[i];
-
+                button.className = "insert_key";
             } else if (keys[i] == "=") {
                 button.innerHTML = keys[i];
+                button.className = "equals_key";
             }
-
             document.getElementById("keypad").appendChild(button);
 
         }
