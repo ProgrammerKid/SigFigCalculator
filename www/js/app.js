@@ -48,8 +48,8 @@ var app = {
                 button.innerHTML = keys[i];
                 button.className = "equals_key";
             }
-            document.getElementById("keypad").appendChild(button);
 
+            document.getElementById("keypad").appendChild(button);
         }
 
         return 0;

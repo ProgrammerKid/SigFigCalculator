@@ -1,13 +1,16 @@
 $(document).ready(function() {
-    $(".insert_key").touchstart(function() {
+    $(".insert_key").bind("touchstart click", function() {
         app.insertToInput(this.innerHTML);
     });
 
-    $(".equals_key").touchstart(function() {
+    $(".equals_key").bind("touchstart click", function() {
         var currInput = document.getElementById("sigfig_input");
         currInput.value = eval(currInput.value);
     });
     
     //clear the display
-    document.getElementById("sigfig_input").value = "";
+    (function() {
+        console.log("Clearing the display element");
+        document.getElementById("sigfig_input").value = "";
+    })()
 });
