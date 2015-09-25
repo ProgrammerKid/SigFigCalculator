@@ -18,14 +18,8 @@ var app = {
     },
 
     equals: function() {
-        try {
-            var input = document.getElementById("sigfig_input");
-            input.innerHTML = eval(input.innerHTML);
-        } catch (TypeError) {
-            return eval(input.innerHTML);
-        } finally {
-            return 0;
-        }
+        var input = document.getElementById("sigfig_input");
+        input.innerHTML = eval(input.innerHTML);
     },
 
     initKeypad: function() {
