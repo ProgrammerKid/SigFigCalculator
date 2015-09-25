@@ -4,8 +4,7 @@ $(document).ready(function() {
     });
 
     $(".equals_key").bind("touchstart click", function() {
-        var currInput = document.getElementById("sigfig_input");
-        currInput.value = eval(currInput.value);
+        app.equals();
     });
     
     //clear the display

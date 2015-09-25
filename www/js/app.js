@@ -18,8 +18,12 @@ var app = {
     },
 
     equals: function() {
-        var input = document.getElementById("sigfig_input");
-        input.innerHTML = eval(input.innerHTML);
+        var input = document.getElementById("sigfig_input").value;
+        while (input.indexOf("x") >= 0) {
+            input = input.replace("x", "*");
+        }
+        
+        document.getElementById("sigfig_input").value = eval(input);
     },
 
     initKeypad: function() {
